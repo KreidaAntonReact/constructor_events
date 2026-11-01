@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <script src="./app.js" defer></script>
+    <title>Constructor events</title>
+</head>
+<body>
+    <div id="data-error" hidden>Ошибка данных.</div>
+
+    <div class="card" id="event-card" hidden>
+        <h1 id="event-title"></h1>
+
+        <div class="info-block">
+            <p id="event-date"></p>
+            <p id="event-place"></p>
+            <p id="event-description"></p>
+        </div>
+
+        <div class="footer-block">
+            <button
+                class="button"
+                id="show-program"
+                type="button"
+            >
+                Показать программу
+            </button>
+
+            <div hidden id="program"></div>
+        </div>
+    </div>
+
+    <form class="card" id="service-form" hidden>
+        <p class="form-title">Выберите услуги</p>
+
+        <div class="checkbox-row">
+            <input type="checkbox" id="guide" name="services" value="guide">
+            <label for="guide">Экскурсия с гидом</label>
+        </div>
+
+        <div class="checkbox-row">
+            <input type="checkbox" id="audio" name="services" value="audio">
+            <label for="audio">Аудиогид</label>
+        </div>
+
+        <div class="checkbox-row">
+            <input type="checkbox" id="catalog" name="services" value="catalog">
+            <label for="catalog">Каталог выставки</label>
+        </div>
+
+        <button class="button" type="submit">Отправить</button>
+    </form>
+
+    <div id="choice-error" hidden>Выберите хотя бы одну услугу.</div>
+
+    <div class="card" id="result" hidden></div>
+    <div class="card" id="report-json" hidden></div>
+</body>
+</html>
